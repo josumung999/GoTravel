@@ -1,7 +1,7 @@
 import { View, Text, SafeAreaView, Image, ScrollView } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
-import { Avatar, Hotels } from '../assets';
+import { Attractions, Avatar, Hotels, Restaurants } from '../assets';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import MenuContainer from '../components/MenuContainer';
 
@@ -50,11 +50,25 @@ const Discover = () => {
 
       {/* Menu container */}
       <ScrollView>
-        <View className="flex-row items-center justify-center px-8 mt-8">
+        <View className="flex-row items-center justify-between px-8 mt-8">
           <MenuContainer 
             key="hotel"
             title="Hotels"
             imageSrc={Hotels}
+            type={type}
+            setType={setType}
+          />
+          <MenuContainer 
+            key="attractions"
+            title="Attractions"
+            imageSrc={Attractions}
+            type={type}
+            setType={setType}
+          />
+          <MenuContainer 
+            key="restaurants"
+            title="Restaurants"
+            imageSrc={Restaurants}
             type={type}
             setType={setType}
           />
