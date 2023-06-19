@@ -1,6 +1,7 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView, Image } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
+import { HeroImage } from '../assets';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -35,8 +36,16 @@ const HomeScreen = () => {
       </View>
 
       {/* Circle section */}
-      <View className="w-[400px] h-[400px] bg-[#00BCC9] absolute bottom-36 -right-36 rounded-full"></View>
-      <View className="w-[400px] h-[400px] bg-[#E99265] -bottom-28 absolute-36 -left-36 rounded-full"></View>
+      <View className="w-[400px] h-[400px] bg-[#00BCC9] rounded-full absolute bottom-36 -right-36"></View>
+      <View className="w-[400px] h-[400px] bg-[#E99265] rounded-full absolute -bottom-28 -left-36"></View>
+      {/* Image container */}
+      <View className="flex-1 relative items-center justify-center">
+        <Image 
+          source={HeroImage}
+          className="w-full h-full object-cover mt-20"
+        />
+
+      </View>
     </SafeAreaView>
   )
 }
