@@ -24,6 +24,15 @@ const HomeScreen = () => {
           Travel
         </Text>
       </View>
+
+      {/* Second section */}
+      <View className="px-6 mt-8 space-y-3">
+        <Text className="text-[#3C6072] text-[42px] ">Enjoy your trip with</Text>
+        <Text className="text-[#00BCC9] text-[38px] font-bold">Good Moments</Text>
+        <Text className="text-[#3C6072] text-base">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam distinctio, veniam praesentium.
+        </Text>
+      </View>
     </SafeAreaView>
   )
 }
