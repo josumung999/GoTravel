@@ -5,6 +5,7 @@ import { Attractions, Avatar, Hotels, Restaurants } from '../assets';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import MenuContainer from '../components/MenuContainer';
 import { FontAwesome } from '@expo/vector-icons';
+import ItemCardContainer from '../components/ItemCardContainer';
 
 const Discover = () => {
   const navigation = useNavigation();
@@ -85,7 +86,11 @@ const Discover = () => {
           </View>
 
           <View className="px-4 mt-8 flex-row items-center justify-evenly flex-wrap">
-
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <ItemCardContainer 
+                key={item}
+              />
+            ))}
           </View>
         </View>
       </ScrollView>
