@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Image } from 'react-native'
+import { View, Text, SafeAreaView, Image, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { HeroImage } from '../assets';
@@ -44,8 +44,18 @@ const HomeScreen = () => {
           source={HeroImage}
           className="w-full h-full object-cover mt-20"
         />
-
+        {/* Action Button */}
+        <View className="absolute bottom-20 h-24 w-24 border-l-2 border-r-2 border-t-4 border-[#00BCC9] rounded-full items-center justify-center">
+          <TouchableOpacity>
+            <View className="w-20  h-20  bg-[#00BCC9] rounded-full items-center justify-center">
+              <Text className="text-gray-50 text-[40px] font-semibold">
+                Go
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
+
     </SafeAreaView>
   )
 }
