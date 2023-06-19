@@ -33,6 +33,10 @@ const HomeScreen = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam distinctio, veniam praesentium.
         </Text>
       </View>
+
+      {/* Circle section */}
+      <View className="w-[400px] h-[400px] bg-[#00BCC9] absolute bottom-36 -right-36 rounded-full"></View>
+      <View className="w-[400px] h-[400px] bg-[#E99265] -bottom-28 absolute-36 -left-36 rounded-full"></View>
     </SafeAreaView>
   )
 }
