@@ -1,9 +1,10 @@
-import { View, Text, SafeAreaView, Image, ScrollView } from 'react-native'
+import { View, Text, SafeAreaView, Image, ScrollView, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { Attractions, Avatar, Hotels, Restaurants } from '../assets';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import MenuContainer from '../components/MenuContainer';
+import { FontAwesome } from '@expo/vector-icons';
 
 const Discover = () => {
   const navigation = useNavigation();
@@ -72,6 +73,20 @@ const Discover = () => {
             type={type}
             setType={setType}
           />
+        </View>
+
+        <View>
+          <View className="px-4 flex-row items-center justify-between mt-8" >
+            <Text className="text-[#2C7379] text-[28px] font-bold ">Top Tips</Text>
+            <TouchableOpacity className="flex-row items-center justify-center space-x-2">
+              <Text className="text-[#A0C4C7] text-[20px] font-bold">Explore</Text>
+              <FontAwesome name='long-arrow-right' color="#A0C4C7" />
+            </TouchableOpacity>
+          </View>
+
+          <View className="px-4 mt-8 flex-row items-center justify-evenly flex-wrap">
+
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
