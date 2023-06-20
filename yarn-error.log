@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\USER\.node\corepack\yarn\1.22.15\bin\yarn.js add @react-navigation/native-stack
+  C:\Program Files\nodejs\node.exe C:\Users\USER\.node\corepack\yarn\1.22.15\bin\yarn.js add expo-updates@~0.16.4
 
 PATH: 
-  C:\Users\USER\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\USER\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Git\cmd;C:\php;C:\ProgramData\ComposerSetup\bin;C:\Users\USER\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\PuTTY;C:\Program Files\PostgreSQL\15\pgAdmin 4\web\pgadmin\tools\psql;C:\Users\USER\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\USER\AppData\Local\Programs\Python\Python310;C:\Users\USER\AppData\Local\Microsoft\WindowsApps;C:\Users\USER\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\USER\AppData\Local\GitHubDesktop\bin;C:\Users\USER\AppData\Roaming\Composer\vendor\bin;C:\Users\USER\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\php;C:\ProgramData\ComposerSetup\bin;C:\Users\USER\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\PuTTY\;C:\Program Files\PostgreSQL\15\pgAdmin 4\web\pgadmin\tools\psql;C:\Users\USER\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\USER\AppData\Local\Programs\Python\Python310\;C:\Users\USER\AppData\Local\Microsoft\WindowsApps;C:\Users\USER\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\USER\AppData\Local\GitHubDesktop\bin;C:\Users\USER\AppData\Roaming\Composer\vendor\bin;C:\Users\USER\AppData\Roaming\nvm;C:\Program Files\nodejs
 
 Yarn version: 
   1.22.15
@@ -28,17 +28,23 @@ npm manifest:
       "web": "expo start --web"
     },
     "dependencies": {
+      "@expo/vector-icons": "^13.0.0",
       "@react-navigation/native": "^6.1.6",
+      "@react-navigation/native-stack": "^6.9.12",
+      "axios": "^1.4.0",
       "expo": "~48.0.18",
       "expo-status-bar": "~1.4.4",
       "nativewind": "^2.0.11",
       "react": "18.2.0",
       "react-native": "0.71.8",
+      "react-native-animatable": "^1.3.3",
+      "react-native-google-places-autocomplete": "^2.5.1",
       "react-native-safe-area-context": "4.5.0",
       "react-native-screens": "~3.20.0"
     },
     "devDependencies": {
       "@babel/core": "^7.20.0",
+      "react-native-dotenv": "^3.4.9",
       "tailwindcss": "^3.3.2"
     },
     "private": true
@@ -1916,6 +1922,19 @@ Lockfile:
       react-is "^16.13.0"
       use-latest-callback "^0.1.5"
   
+  "@react-navigation/elements@^1.3.17":
+    version "1.3.17"
+    resolved "https://registry.yarnpkg.com/@react-navigation/elements/-/elements-1.3.17.tgz#9cb95765940f2841916fc71686598c22a3e4067e"
+    integrity sha512-sui8AzHm6TxeEvWT/NEXlz3egYvCUog4tlXA4Xlb2Vxvy3purVXDq/XsM56lJl344U5Aj/jDzkVanOTMWyk4UA==
+  
+  "@react-navigation/native-stack@^6.9.12":
+    version "6.9.12"
+    resolved "https://registry.yarnpkg.com/@react-navigation/native-stack/-/native-stack-6.9.12.tgz#a09fe43ab2fc4c82a1809e3953021d1da4ead85c"
+    integrity sha512-kS2zXCWP0Rgt7uWaCUKrRl7U2U1Gp19rM1kyRY2YzBPXhWGVPjQ2ygBp88CTQzjgy8M07H/79jvGiZ0mlEJI+g==
+    dependencies:
+      "@react-navigation/elements" "^1.3.17"
+      warn-once "^0.1.0"
+  
   "@react-navigation/native@^6.1.6":
     version "6.1.6"
     resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-6.1.6.tgz#84ff5cf85b91f660470fa9407c06c8ee393d5792"
@@ -2272,6 +2291,15 @@ Lockfile:
     version "2.1.2"
     resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
     integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
+  
+  axios@^1.4.0:
+    version "1.4.0"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
+    integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
+    dependencies:
+      follow-redirects "^1.15.0"
+      form-data "^4.0.0"
+      proxy-from-env "^1.1.0"
   
   babel-core@^7.0.0-bridge.0:
     version "7.0.0-bridge.0"
@@ -3155,6 +3183,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
     integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
   
+  dotenv@^16.3.1:
+    version "16.3.1"
+    resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
+    integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
+  
   ee-first@1.1.1:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -3585,6 +3618,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.185.2.tgz#cb7ee57f77377d6c5d69a469e980f6332a15e492"
     integrity sha512-2hJ5ACYeJCzNtiVULov6pljKOLygy0zddoqSI1fFetM+XRPpRshFdGEijtqlamA1XwyZ+7rhryI6FQFzvtLWUQ==
   
+  follow-redirects@^1.15.0:
+    version "1.15.2"
+    resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
+    integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
+  
   fontfaceobserver@^2.1.0:
     version "2.3.0"
     resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.3.0.tgz#5fb392116e75d5024b7ec8e4f2ce92106d1488c8"
@@ -3599,6 +3637,15 @@ Lockfile:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.1.tgz#ebd53791b78356a99af9a300d4282c4d5eb9755f"
     integrity sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==
+    dependencies:
+      asynckit "^0.4.0"
+      combined-stream "^1.0.8"
+      mime-types "^2.1.12"
+  
+  form-data@^4.0.0:
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+    integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
     dependencies:
       asynckit "^0.4.0"
       combined-stream "^1.0.8"
@@ -5828,7 +5875,7 @@ Lockfile:
       kleur "^3.0.3"
       sisteransi "^1.0.5"
   
-  prop-types@*:
+  prop-types@*, prop-types@^15.7.2:
     version "15.8.1"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
     integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -5836,6 +5883,11 @@ Lockfile:
       loose-envify "^1.4.0"
       object-assign "^4.1.1"
       react-is "^16.13.1"
+  
+  proxy-from-env@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+    integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
   
   pump@^3.0.0:
     version "3.0.0"
@@ -5856,6 +5908,11 @@ Lockfile:
     integrity sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==
     dependencies:
       side-channel "^1.0.4"
+  
+  qs@~6.9.1:
+    version "6.9.7"
+    resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.7.tgz#4610846871485e1e048f44ae3b94033f0e675afe"
+    integrity sha512-IhMFgUmuNpyRfxA90umL7ByLlgRXu6tIfKPpF5TmcfRLlLCckfP/g3IQmju6jjpu+Hh8rA+2p6A27ZSPOOHdKw==
   
   query-string@^7.1.3:
     version "7.1.3"
@@ -5930,6 +5987,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
     integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
   
+  react-native-animatable@^1.3.3:
+    version "1.3.3"
+    resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.3.3.tgz#a13a4af8258e3bb14d0a9d839917e9bb9274ec8a"
+    integrity sha512-2ckIxZQAsvWn25Ho+DK3d1mXIgj7tITkrS4pYDvx96WyOttSvzzFeQnM2od0+FUMzILbdHDsDEqZvnz1DYNQ1w==
+    dependencies:
+      prop-types "^15.7.2"
+  
   react-native-codegen@^0.71.5:
     version "0.71.5"
     resolved "https://registry.yarnpkg.com/react-native-codegen/-/react-native-codegen-0.71.5.tgz#454a42a891cd4ca5fc436440d301044dc1349c14"
@@ -5939,6 +6003,22 @@ Lockfile:
       flow-parser "^0.185.0"
       jscodeshift "^0.13.1"
       nullthrows "^1.1.1"
+  
+  react-native-dotenv@^3.4.9:
+    version "3.4.9"
+    resolved "https://registry.yarnpkg.com/react-native-dotenv/-/react-native-dotenv-3.4.9.tgz#621c5b0c1d0c5c7f569bfe5a1d804bec7885c010"
+    integrity sha512-dbyd+mcy7SUzxEgmt33TRf1FGcNe6swJhXmB0unKkI49F7+pidog9kPtjxMLTAfmKA8gcN2XHQSKltGfGbGCLQ==
+    dependencies:
+      dotenv "^16.3.1"
+  
+  react-native-google-places-autocomplete@^2.5.1:
+    version "2.5.1"
+    resolved "https://registry.yarnpkg.com/react-native-google-places-autocomplete/-/react-native-google-places-autocomplete-2.5.1.tgz#93d5ac3e34e3e8f594aae5349f9e2d3e0b87484e"
+    integrity sha512-2FZZomogB18mLSC/N39UcpiVoJn/fFIpud1M2KZMom/pJhSMgfqV4qLjHuzaDyYIl7KBz/zpGDcbYgmtvvpkHQ==
+    dependencies:
+      lodash.debounce "^4.0.8"
+      prop-types "^15.7.2"
+      qs "~6.9.1"
   
   react-native-gradle-plugin@^0.71.18:
     version "0.71.19"
