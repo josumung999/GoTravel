@@ -89,6 +89,9 @@ const Discover = () => {
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <ItemCardContainer 
                 key={item}
+                imageSrc="https://cdn.pixabay.com/photo/2015/10/30/12/22/eat-1014025_1280.jpg"
+                title="Mon Beguin"
+                location="Kinshasa"
               />
             ))}
           </View>
