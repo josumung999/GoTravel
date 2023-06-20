@@ -3,9 +3,8 @@ import { FontAwesome } from "@expo/vector-icons";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 
-const ItemCardContainer = ({ imageSrc, title, location }) => {
-  const navigation = useNavigation()
-
+const ItemCardContainer = ({ imageSrc, title, location, data }) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
       onPress={() => navigation.navigate("ItemScreen", { param: data })}
@@ -33,7 +32,7 @@ const ItemCardContainer = ({ imageSrc, title, location }) => {
         <></>
       )}
     </TouchableOpacity>
-  )
-}
+  );
+};
 
-export default ItemCardContainer
+export default ItemCardContainer;
